@@ -12,7 +12,7 @@ bootstrap table: https://getbootstrap.com/docs/5.2/content/tables/ \
 react-hook-form install: "npm install react-hook-form" \
 react-hook-form docs: https://react-hook-form.com/get-started#Quickstart \
 \
-\
+arquitectura bem: https://platzi.com/blog/bem/
 
 
 # Getting Started with Create React App
