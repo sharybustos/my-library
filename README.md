@@ -1,5 +1,5 @@
-# Manejo de Rutas y Formularios en React - (19/11/2022) \
-### Enlaces y dependencias usadas: \
+# Manejo de Rutas y Formularios en React - (19/11/2022) 
+### Enlaces y dependencias usadas: 
 \
 react-router-dom install: "npm install react-router-dom" \
 react-router-dom docs: https://reactrouter.com/en/main/start/tutorial \
