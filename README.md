@@ -1,3 +1,16 @@
+#Enlaces usados (19/11/2022) - Manejo de Rutas y Formularios en React
+react-router-dom install: "npm install react-router-dom"
+react-router-dom docs: https://reactrouter.com/en/main/start/tutorial
+react-router-dom guide: https://blog.webdevsimplified.com/2022-07/react-router/
+
+bootstrap quick start: https://getbootstrap.com/docs/5.2/getting-started/introduction/
+bootsrap navbar: https://getbootstrap.com/docs/5.2/components/navbar/
+bootstrap table: https://getbootstrap.com/docs/5.2/content/tables/
+
+react-hook-form install: "npm install react-hook-form"
+react-hook-form docs: https://react-hook-form.com/get-started#Quickstart
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
