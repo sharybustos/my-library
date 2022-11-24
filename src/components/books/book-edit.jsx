@@ -5,7 +5,8 @@ const bookData = {
     id: 1,
     title: 'Be loved',
     author: 'Toni Morrison',
-    year: '1987'
+    year: '1987',
+    readAt: '2022-10-07'
 }
 
 const BookEdit = () => {

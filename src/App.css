@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 15px;
 }
 
 .navbar-nav {
@@ -7,20 +8,20 @@
   gap: 15px;
 }
 
-.form-login {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.form-login__item {
+.form__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.form-login__item p {
+.form__item p {
   color: red;
   font-size: 12px;
 }
@@ -37,4 +38,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.books-home__create {
+  float: right;
+  margin: 10px 0px;
 }

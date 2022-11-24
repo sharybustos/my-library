@@ -10,9 +10,10 @@ import Navbar from './components/navbar';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
+
+    <BrowserRouter>
+      <Navbar />
+      <div className="App">
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/books" element={<BooksHome />} />
@@ -21,8 +22,8 @@ function App() {
           <Route path="/books/new" element={<BookNew />} />
           <Route path="/contenedor" element={<Contenedor />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 

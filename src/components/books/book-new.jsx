@@ -4,7 +4,7 @@ const BookNew = () => {
     return (
         <>
             <h1>This is the create form</h1>
-            <BookForm data={{}} />
+            <BookForm data={[]} />
         </>
     )
 }

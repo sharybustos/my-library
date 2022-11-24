@@ -5,8 +5,8 @@ const Login = () => {
     const customSubmit = (data) => { console.log('login data', data) }
 
     return (
-        <form className="form-login" onSubmit={handleSubmit(customSubmit)}>
-            <div className="form-login__item">
+        <form className="form" onSubmit={handleSubmit(customSubmit)}>
+            <div className="form__item">
                 <label>FirstName</label>
                 <input
                     {...register("firstName", { required: true, maxLength: 10 })}
@@ -14,7 +14,7 @@ const Login = () => {
                 />
                 {errors.firstName && <p>Field required. Max length 10</p>}
             </div>
-            <div className="form-login__item">
+            <div className="form__item">
                 <label>LastName</label>
                 <input
                     {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })}
@@ -22,7 +22,7 @@ const Login = () => {
                 />
                 {errors.lastName && <p>Field required. ABC required</p>}
             </div>
-            <div className="form-login__item">
+            <div className="form__item">
                 <label>Age</label>
                 <input
                     type="number"
@@ -31,7 +31,7 @@ const Login = () => {
                 />
                 {errors.age && <p>Min 18. Max 99</p>}
             </div>
-            <div className="form-login__item">
+            <div className="form__item">
                 <label>Date</label>
                 <input
                     type="date"
