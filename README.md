@@ -6,13 +6,12 @@ CP SESION 13: https://uninorte-my.sharepoint.com/:w:/g/personal/sastoquek_uninor
 CP SESION 14: https://uninorte-my.sharepoint.com/:w:/g/personal/sastoquek_uninorte_edu_co/EWHuC4cxEuFAjLpsT6RIJIEBKljxraDy4Eqsz8hFT7BvQw?e=n7OOMe \
 
 ### Enlaces y dependencias usadas:
-body-parser: "npm install body-parser"
-cors: "npm install cors"
-express: "npm install express"
-http-errors: "npm install http-errors"
-mongoose: "npm install mongoose"
-nodemon: "npm install nodemon --save-dev"
-\
+body-parser: "npm install body-parser" \
+cors: "npm install cors" \
+express: "npm install express" \
+http-errors: "npm install http-errors" \
+mongoose: "npm install mongoose" \
+nodemon: "npm install nodemon --save-dev" \
 \ 
 Documentación mongoose: \
 https://mongoosejs.com/docs/
