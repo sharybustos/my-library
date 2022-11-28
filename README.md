@@ -12,7 +12,8 @@ express: "npm install express" \
 http-errors: "npm install http-errors" \
 mongoose: "npm install mongoose" \
 nodemon: "npm install nodemon --save-dev" \
-\ 
+
+
 Documentación mongoose: \
 https://mongoosejs.com/docs/
 
