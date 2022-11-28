@@ -17,6 +17,9 @@ nodemon: "npm install nodemon --save-dev" \
 Documentación mongoose: \
 https://mongoosejs.com/docs/
 
+Tutorial de MERN:
+https://www.positronx.io/react-mern-stack-crud-app-tutorial/
+
 
 # Manejo de Rutas y Formularios en React - (19/11/2022) 
 ### Enlaces y dependencias usadas: 
