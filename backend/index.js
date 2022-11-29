@@ -5,6 +5,7 @@ let bodyParser = require('body-parser')
 require("dotenv").config()
 
 const bookRoute = require('../backend/routes/book.route')
+const userRoute = require('../backend/routes/user.route')
 
 mongoose
     .connect(process.env.MONGO_DB_URI)
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(cors())
 app.use('/books', bookRoute)
+app.use('/users', userRoute)
 
 // PORT
 const port = process.env.PORT || 5000

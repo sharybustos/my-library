@@ -2,14 +2,15 @@ let mongoose = require('mongoose'),
     express = require('express'),
     router = express.Router()
 
-let bookSchema = require('../models/Book')
+let userSchema = require('../models/User')
 
 // CRUD
 
 // Create
-//localhost:5000/books/create
+//localhost:5000/users/create
 router.route('/create').post((req, res, next) => {
-    bookSchema.create(req.body, (error, data) => {
+    console.log(req.body)
+    userSchema.create(req.body, (error, data) => {
         if (error) {
             return next(error)
         } else {
@@ -18,10 +19,10 @@ router.route('/create').post((req, res, next) => {
     })
 })
 
-// Read Books
-//localhost:5000/books?userId=123
-router.route('/').get((req, res, next) => {
-    bookSchema.find({ userId: req.query.userId }, (error, data) => {
+// Read Users
+//localhost:5000/users/
+router.route('/').get((req, res) => {
+    userSchema.find((error, data) => {
         if (error) {
             return next(error)
         } else {
@@ -30,10 +31,10 @@ router.route('/').get((req, res, next) => {
     })
 })
 
-// Read Books
-//localhost:5000/books/1
+// Read Users
+//localhost:5000/users/1
 router.route('/:id').get((req, res, next) => {
-    bookSchema.findById(req.params.id, (error, data) => {
+    userSchema.findById(req.params.id, (error, data) => {
         if (error) {
             return next(error)
         } else {
@@ -42,10 +43,10 @@ router.route('/:id').get((req, res, next) => {
     })
 })
 
-// Update Books
-//localhost:5000/books/edit/2
+// Update Users
+//localhost:5000/users/edit/2
 router.route('/edit/:id').put((req, res, next) => {
-    bookSchema.findByIdAndUpdate(req.params.id, {
+    userSchema.findByIdAndUpdate(req.params.id, {
         $set: req.body
     }, (error, data) => {
         if (error) {
@@ -57,10 +58,10 @@ router.route('/edit/:id').put((req, res, next) => {
     })
 })
 
-// Delete Books
-//localhost:5000/books/delete/2
+// Delete Users
+//localhost:5000/users/delete/2
 router.route('/delete/:id').delete((req, res, next) => {
-    bookSchema.findByIdAndRemove(req.params.id, (error, data) => {
+    userSchema.findByIdAndRemove(req.params.id, (error, data) => {
         if (error) {
             return next(error)
         } else {

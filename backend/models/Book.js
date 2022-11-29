@@ -17,6 +17,9 @@ let bookSchema = new Schema({
     },
     readAt: {
         type: Date
+    },
+    userId: {
+        type: Schema.Types.ObjectId, ref: 'User'
     }
 }, {
     collection: 'books'
