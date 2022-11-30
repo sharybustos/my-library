@@ -1,27 +1,6 @@
 import { Link } from "react-router-dom"
-
-const books = [
-    {
-        id: 1,
-        title: 'Be loved',
-        author: 'Toni Morrison',
-        year: '1987',
-        readAt: '2022-12-12'
-    },
-    {
-        id: 2,
-        title: 'Moby-Dick',
-        author: 'Herman Meliville',
-        year: '1851',
-        readAt: '2022-12-12'
-    },
-    {
-        id: 3,
-        title: 'The Great Gatsby',
-        author: 'Scott Fitzgerald',
-        year: '1925',
-        readAt: '2022-12-12'
-    }]
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 const labels = [
     "#",
@@ -33,6 +12,29 @@ const labels = [
 ]
 
 const BooksHome = () => {
+    const [books, setBooks] = useState(null)
+    const [update, setUpdate] = useState(false)
+
+    useEffect(() => {
+        const userId = "63857941aa0cb09677c30304"
+        axios
+            .get("http://localhost:4000/books?userId=" + userId)
+            .then((response) => {
+                console.log(response.data)
+                setBooks(response.data)
+            })
+
+    }, [update])
+
+    const deleteClick = (bookId) => {
+        axios
+            .delete("http://localhost:4000/books/delete/" + bookId)
+            .then(response => {
+                console.log(response.data)
+                setUpdate(!update)
+            })
+    }
+
     return (
         <>
             <div className="books-home">
@@ -46,22 +48,22 @@ const BooksHome = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {books.map((book, index) => {
+                        {books !== null ? books.map((book, index) => {
                             return (
                                 <tr key={index}>
                                     <th scope="row">
-                                        <Link to={'/books/' + book.id}>{book.id}</Link>
+                                        <Link to={'/books/' + book._id}>{index}</Link>
                                     </th>
                                     <td>{book.title}</td>
                                     <td>{book.author}</td>
                                     <td>{book.year}</td>
                                     <td>{book.readAt}</td>
                                     <td className="d-flex gap-2 justify-content-center">
-                                        <Link className="btn btn-success" to={'/books/' + book.id + '/edit'}>Edit</Link>
-                                        <Link className="btn btn-danger" to={'/books/' + book.id + '/delete'}>Delete</Link>
+                                        <Link className="btn btn-success" to={'/books/' + book._id + '/edit'}>Edit</Link>
+                                        <a className="btn btn-danger" onClick={() => deleteClick(book._id)}>Delete</a>
                                     </td>
                                 </tr>)
-                        })}
+                        }) : ''}
                     </tbody>
                 </table>
             </div>

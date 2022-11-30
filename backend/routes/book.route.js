@@ -19,7 +19,7 @@ router.route('/create').post((req, res, next) => {
 })
 
 // Read Books
-//localhost:5000/books?userId=123
+//localhost:5000/books?userId=1234
 router.route('/').get((req, res, next) => {
     bookSchema.find({ userId: req.query.userId }, (error, data) => {
         if (error) {

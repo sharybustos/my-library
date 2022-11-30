@@ -1,22 +1,35 @@
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react"
+import axios from "axios"
 
 
-const BookForm = ({ data }) => {
+const BookForm = ({ data, bookId }) => {
     const [isEdit, setIsEdit] = useState(false)
 
     const { register, formState: { errors }, handleSubmit, setValue } = useForm();
 
     const customSubmit = (dataForm) => {
-        if (isEdit) {
-            console.log('Here goes the edit logic')
-        } else {
-            console.log('Here goes create logic')
+        const bookObject = {
+            title: dataForm.bookName,
+            author: dataForm.authorName,
+            year: dataForm.year,
+            readAt: dataForm.readAt,
+            userId: "63857941aa0cb09677c30304"
         }
-        console.log('dataForm', dataForm)
+
+        if (isEdit) {
+            axios
+                .put("http://localhost:4000/books/edit/" + bookId, bookObject)
+                .then(response => console.log(response.data))
+        } else {
+            axios
+                .post("http://localhost:4000/books/create", bookObject)
+                .then(response => console.log(response.data))
+        }
     }
 
     useEffect(() => {
+        console.log(data)
         if (data.length !== 0) {
             setIsEdit(true)
             setValue('bookName', data.title)
@@ -24,7 +37,7 @@ const BookForm = ({ data }) => {
             setValue('year', data.year)
             setValue('readAt', data.readAt)
         }
-    })
+    }, [])
 
     return (
         <>
