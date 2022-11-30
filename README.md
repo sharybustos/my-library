@@ -1,5 +1,5 @@
 # Conexión de API con React - (29/11/2022)
-### Enlaces y dependencias usadas: \
+### Enlaces y dependencias usadas: 
 axios: "npm i axios" \
 dateformat: "npm i dateformat" \
 dateformat-docs: https://www.npmjs.com/package/dateformat 
