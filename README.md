@@ -1,3 +1,19 @@
+# Conexión de API con React - (29/11/2022)
+### Enlaces y dependencias usadas: \
+axios: "npm i axios" \
+dateformat: "npm i dateformat" \
+dateformat-docs: https://www.npmjs.com/package/dateformat \
+
+Vídeo recomendado para Manejo de Sesiones: \
+https://www.youtube.com/watch?v=OK9zmaXIISI \
+
+Canales de Youtube Recomendados: \
+jonmircha: https://www.youtube.com/@jonmircha \
+midudev: https://www.youtube.com/@midudev \
+
+Documentación Date:
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date
+
 # Creación de CRUD con NodeJS, ExpressJS y MongoDB - (28/11/2022)
 ### Configuración inicial de proyecto y MongoDB
 CP SESION 13: https://uninorte-my.sharepoint.com/:w:/g/personal/sastoquek_uninorte_edu_co/EWwP1_-oFzBNgKGjBMYvKl8BhiYx4_XV_NsNJGQ5SN5gtw?e=oZaOXG \
