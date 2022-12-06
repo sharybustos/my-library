@@ -14,7 +14,7 @@ const BookForm = ({ data, bookId }) => {
             author: dataForm.authorName,
             year: dataForm.year,
             readAt: dataForm.readAt,
-            userId: "63857941aa0cb09677c30304"
+            userId: localStorage.getItem('user_id')
         }
 
         if (isEdit) {
