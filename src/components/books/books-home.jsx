@@ -16,7 +16,7 @@ const BooksHome = () => {
     const [update, setUpdate] = useState(false)
 
     useEffect(() => {
-        const userId = "63857941aa0cb09677c30304"
+        const userId = localStorage.getItem('user_id')
         axios
             .get("http://localhost:4000/books?userId=" + userId)
             .then((response) => {
