@@ -1,3 +1,6 @@
+# Manejo de sesiones con LocalStorage - (05/12/2022)
+### Documentación: https://docs.google.com/document/d/1ExHO2GIDXAjVqJDiuyvrf7iTdOR2Vq7ijnTfFKv-UHY/edit?usp=sharing
+
 # Conexión de API con React - (29/11/2022)
 ### Enlaces y dependencias usadas: 
 axios: "npm i axios" \
