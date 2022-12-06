@@ -72,4 +72,19 @@ router.route('/delete/:id').delete((req, res, next) => {
     })
 })
 
+// Login Users
+//localhost:5000/users/login
+router.route('/login').post((req, res, next) => {
+    userSchema.find({
+        username: req.body.username,
+        password: req.body.password
+    }, (error, data) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.json(data)
+        }
+    })
+})
+
 module.exports = router
